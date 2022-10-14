@@ -5,14 +5,18 @@
 https://github.com/protocolbuffers/protobuf/releases
 
 项目中用到以下pacakge
+
 go get google.golang.org/protobuf/cmd/protoc-gen-go   
+
 go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ## 生成pb文件(可以直接通过make compile来生成)
 protoc --go_out=./user --go_opt=paths=source_relative --go-grpc_out=./user --go-grpc_opt=paths=source_relative helloworld.proto
+
 protoc --go_out=./user --go_opt=paths=source_relative --go-grpc_out=./user --go-grpc_opt=paths=source_relative user.proto
 
 # 执行
